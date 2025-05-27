@@ -122,7 +122,7 @@ def torch_load_legacy(path):
     _setup_legacy_env()
 
     # Load network
-    checkpoint_dict = torch.load(path, map_location='cpu')
+    checkpoint_dict = torch.load(path, map_location='cpu', weights_only=False)
 
     # Cleanup legacy
     _cleanup_legacy_env()
