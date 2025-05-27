@@ -2,8 +2,10 @@ import math
 import torch.nn as nn
 from collections import OrderedDict
 import torch.utils.model_zoo as model_zoo
-from torchvision.models.resnet import model_urls
+# from torchvision.models.resnet import model_urls
 from .base import Backbone
+
+model_urls = {} # because of new torchvision
 
 
 def conv3x3(in_planes, out_planes, stride=1, dilation=1):
