@@ -15,6 +15,16 @@ from pytracking.evaluation.multi_object_wrapper import MultiObjectWrapper
 from pathlib import Path
 import torch
 
+# to run in colab
+import cv2
+cv2.namedWindow       = lambda *args, **kwargs: None
+cv2.imshow            = lambda *args, **kwargs: None
+cv2.waitKey           = lambda *args, **kwargs: -1
+cv2.destroyAllWindows = lambda *args, **kwargs: None
+cv2.resizeWindow      = lambda *args, **kwargs: None
+cv2.moveWindow        = lambda *args, **kwargs: None
+cv2.setMouseCallback  = lambda *args, **kwargs: None
+
 
 _tracker_disp_colors = {1: (0, 255, 0), 2: (0, 0, 255), 3: (255, 0, 0),
                         4: (255, 255, 255), 5: (0, 0, 0), 6: (0, 255, 128),
